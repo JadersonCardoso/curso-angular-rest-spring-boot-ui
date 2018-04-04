@@ -1,11 +1,19 @@
 <div class="container">
+  <div class="alert alert-success" role="alert">
+      Funcionário adicionado: <strong>{{nome}}</strong>
+  </div>
+  <div class="form-group">
+    <label >Nome</label>
+    <input type="text" class="form-control" (input)="alterarNome($event)">
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
+</div>
+<div class="container">
   <div class="jumbotron">
-    <h1 class="display-4">Hello, {{nome}}!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+    <h1 class="display-4">Meu nome é {{nome}}!</h1>
+
+    <h1 class="display-4">Minha idade {{28 + getIdade()}}!</h1>
+
   </div>
 </div>  
