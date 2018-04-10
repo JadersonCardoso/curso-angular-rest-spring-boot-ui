@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nome = 'Jaderson';
+  nome2 = '';
   idade = 10;
 
   getIdade() {
@@ -18,6 +19,11 @@ export class AppComponent {
     const numero = Math.round(Math.random() * 100);
     this.nome = this.nome + numero;
   }
+
+  adicionarNome(nome: string) {
+    this.nome2 = nome;
+  }
+
 
   alterarNome(event: any) {
     //console.log(event);
