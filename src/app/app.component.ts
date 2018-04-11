@@ -6,9 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  funcionarios =[];
+
+  aoAdicionar(funcionario){
+    this.funcionarios.push(funcionario);
+
+  }
+
+  /*
   nome = 'Jaderson';
   nome2 = '';
   idade = 10;
+  adicionado = false;
+  ultimoId =0;
+  funcionarios =[];
+
 
   getIdade() {
     return this.idade;
@@ -20,6 +32,14 @@ export class AppComponent {
     this.nome = this.nome + numero;
   }
 
+  adicionarDiretiva(){
+    this.adicionado = true;
+    this.funcionarios.push({
+      id: ++this.ultimoId,
+      nome: this.nome
+    });
+  }
+
   adicionarNome(nome: string) {
     this.nome2 = nome;
   }
@@ -29,4 +49,5 @@ export class AppComponent {
     //console.log(event);
     this.nome = event.target.value;
   }
+  */
 }
