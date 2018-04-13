@@ -9,10 +9,15 @@ export class FuncionarioCardComponent  {
 
   @Input() funcionario: any;
 
+  isAdmin(){
+    return this.funcionario.nome.startsWith('T');
+  }
 
   getEstiloCartao() {
     return {
-      'background-color': 'red'
+      'border-width.px': this.funcionario.id,
+      'background-color': this.funcionario.id % 2 === 0
+          ? 'lightblue' : 'lightgreen'
     };
   }
 
