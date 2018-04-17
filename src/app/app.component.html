@@ -1,5 +1,5 @@
 <div class="container">
-<!-- 
+<!--
   <div class="alert alert-success" role="alert">
       Funcionário adicionado: <strong>{{nome}}</strong>
   </div>
@@ -19,11 +19,11 @@
   <div class="form-group">
     <label >Nome Two-Away Data Binding</label>
     <input type="text" class="form-control" [(ngModel)] = "nome">
-  </div>  
+  </div>
 
   <button type="button" class="btn btn-primary" [disabled]="nome.length == 0" (click)="adicionar()">Adicionar</button>
   <button type="button" class="btn btn-primary" (click)="adicionarNome(inputNome.value)">Adicionar Nome</button>
--->  
+
 
   <app-funcionario-form (funcionarioAdicionado)="aoAdicionar($event)"></app-funcionario-form>
 
@@ -34,6 +34,7 @@
         <app-funcionario-card [funcionario]="f"></app-funcionario-card>
     </div>
   </div>
-  
-  
-</div>  
+-->
+<app-formulario></app-formulario>
+
+</div>
