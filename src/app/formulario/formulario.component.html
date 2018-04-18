@@ -8,7 +8,11 @@
       <input type="text" class="form-control" name="primeiroNome"
         [(ngModel)]="cliente.nome" required minlength="10" #nome="ngModel">
 
-        <div *ngIf="nome.hasError('required')">Informe um nome</div>
+        Touched: {{ nome.touched}}<br>
+        Pristine: {{ nome.pristine}}<br>
+        Dirty: {{ nome.dirty }}
+
+        <div *ngIf="nome.hasError('required') && nome.touched">Informe um nome</div>
         <div *ngIf="nome.hasError('minlength')">O nome deve ser completo</div>
     </div>
 
