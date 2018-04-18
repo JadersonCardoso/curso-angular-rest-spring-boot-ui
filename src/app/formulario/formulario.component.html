@@ -3,17 +3,16 @@
     Preencha todos os campos.
   </div>
   <form #usuarioForm="ngForm" (ngSubmit)="salvar(usuarioForm)">
-    <div class="form-group">
+    <div class="form-group"
+      [class.has-danger]="nome.invalid && nome.touched">
       <label class="form-control-label">Nome</label>
       <input type="text" class="form-control" name="primeiroNome"
         [(ngModel)]="cliente.nome" required minlength="10" #nome="ngModel">
 
-        Touched: {{ nome.touched}}<br>
-        Pristine: {{ nome.pristine}}<br>
-        Dirty: {{ nome.dirty }}
-
-        <div *ngIf="nome.hasError('required') && nome.touched">Informe um nome</div>
-        <div *ngIf="nome.hasError('minlength') && nome.touched">O nome deve ser completo</div>
+        <div *ngIf="nome.hasError('required')"
+          class="form-control-feedback">Informe um nome</div>
+        <div *ngIf="nome.hasError('minlength')"
+          class="form-control-feedback">O nome deve ser completo</div>
     </div>
 
     <div class="form-group">
