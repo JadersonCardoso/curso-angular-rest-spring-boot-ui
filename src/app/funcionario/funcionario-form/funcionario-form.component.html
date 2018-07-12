@@ -1,4 +1,7 @@
 <div class="form-group">
+
+
+<!--
   <label >Nome </label>
   <input type="text" class="form-control" [(ngModel)] = "nome"
       (focus)="adicionado = false" [appCampoColorido]="'red'"
@@ -9,6 +12,11 @@
     (click)="adicionarDiretiva()">Adicionar Diretiva</button>
 <button class="btn btn-info" (click)="campo.colorir()">Colorir</button>
 <button class="btn btn-info" (click)="campo.descolorir()">Descolorir</button>
+-->
+<label>Nome </label>
+<input type="text" class="form-control" #nome>
+</div>
 
-
+<button type="button" class="btn btn-primary" (click)="adicionar(nome.value); nome.value = ''"
+[disabled]="nome.length == 0">Adicionar</button>
 
